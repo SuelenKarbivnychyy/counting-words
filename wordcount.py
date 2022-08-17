@@ -8,9 +8,11 @@
 #create blank dictionary for word count
 #open the file
 #iterate through the file
-#determine each word
-#count each word in the file
-#close file
+#replace punctuation with empty string
+#split lines by space, and save it to a variable words
+#iterate through each word in the split file
+#set every word to be lower case
+#append each word to new list, check if word in new list, if word in list increase word by one.
 
 
 def word_count(file_name):
@@ -19,11 +21,9 @@ def word_count(file_name):
     
     with open(file_name) as test_file:  
         
-        for line in test_file:
+        for line in test_file.readlines():
             line = line.rstrip()
-            line = line.replace(",", "")
-            line = line.replace(".", "")
-            line = line.replace("?", "")
+            line = line.replace(",", "").replace(".", "").replace("?", "")
             words = line.split(' ')
 
             for word in words:
@@ -34,5 +34,3 @@ def word_count(file_name):
 
 word_counts = word_count('test.txt')
 print(word_counts)
-
-
