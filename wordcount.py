@@ -32,5 +32,5 @@ def word_count(file_name):
     
     return counting_words
 
-word_counts = word_count('test.txt')
-print(word_counts)
+word_counting = word_count('test.txt')
+print(word_counting)
