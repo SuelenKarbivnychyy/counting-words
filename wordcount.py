@@ -24,7 +24,8 @@ def word_count(file_name):
         for line in test_file.readlines():
             line = line.rstrip()
             line = line.replace(",", "").replace(".", "").replace("?", "")
-            words = line.split(' ')
+            words = line.split(' ')    
+                   
 
             for word in words:
                 word = word.lower()
